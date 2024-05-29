@@ -1,0 +1,44 @@
+{
+  "name": "@brendangooch/simple-game-loop",
+  "version": "1.0.0",
+  "description": "",
+  "author": "B Gooch <brendangooch@gmail.com>",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "prepack": "npm run build",
+    "prebuild": "npm run clean",
+    "clean": "rm -rf lib",
+    "build": "tsc"
+  },
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "exports": {
+    ".": "./lib/simple-game-loop.js"
+  },
+  "types": "./lib/simple-game-loop.d.ts",
+  "files": [
+    "/lib",
+    "!/lib/**/*.js.map",
+    "!/lib/*.js.map"
+  ],
+  "devDependencies": {
+    "typescript": "^5.4.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brendangooch/simple-game-loop.git"
+  },
+  "homepage": "https://github.com/brendangooch/simple-game-loop#readme",
+  "bugs": {
+    "url": "https://github.com/brendangooch/simple-game-loop/issues",
+    "email": "brendangooch@gmail.com"
+  },
+  "keywords": [
+    "game loop",
+    "gameloop",
+    "javascript"
+  ]
+}
