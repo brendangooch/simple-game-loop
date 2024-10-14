@@ -3,7 +3,8 @@
  */
 
 export interface iUpdateable {
-    get isOn(): boolean;
+    turnOn(): void;
+    turnOff(): void;
     update(ms: number): void;
 }
 
@@ -37,7 +38,7 @@ export default class SimpleGameLoop {
 
     private update(): void {
         this.updateMS();
-        this.objectsToUpdate.forEach(obj => { if (obj.isOn) obj.update(this.ms) });
+        this.objectsToUpdate.forEach(obj => obj.update(this.ms));
         this.bindRAF();
     }
 
