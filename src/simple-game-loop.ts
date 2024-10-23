@@ -2,13 +2,9 @@
  * 
  */
 
-export interface iUpdateable {
-    turnOn(): void;
-    turnOff(): void;
-    update(ms: number): void;
-}
+import { iUpdateable } from "./index.js";
 
-export default class SimpleGameLoop {
+export class SimpleGameLoop {
 
     private objectsToUpdate: iUpdateable[] = [];
     private running: boolean = false;

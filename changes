@@ -1,0 +1,5 @@
+
+v3.0.0
+    added a barrel index.ts file for consistency across packages
+    updated some config settings to latest templates
+    

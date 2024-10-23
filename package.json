@@ -6,23 +6,22 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
+    "build": "tsc -p tsconfig.prod.json",
+    "build-dev": "npm run prebuild && tsc",
+    "prebuild": "npm run remove-lib",
     "prepack": "npm run build",
-    "prebuild": "npm run clean",
-    "clean": "rm -rf lib",
-    "build": "tsc"
+    "remove-lib": "rm -rf lib"
   },
   "private": false,
   "publishConfig": {
     "access": "public"
   },
   "exports": {
-    ".": "./lib/simple-game-loop.js"
+    ".": "./lib/index.js"
   },
-  "types": "./lib/simple-game-loop.d.ts",
+  "types": "./lib/index.d.ts",
   "files": [
-    "/lib",
-    "!/lib/**/*.js.map",
-    "!/lib/*.js.map"
+    "/lib"
   ],
   "devDependencies": {
     "typescript": "^5.4.5"
