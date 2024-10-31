@@ -3,3 +3,6 @@ v3.0.0
     added a barrel index.ts file for consistency across packages
     updated some config settings to latest templates
     
+v4.0.0
+    removed turnOn() and turnOff() methods from iUpdateable interface
+    this functionality is handled internally by updateable objects

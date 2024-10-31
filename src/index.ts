@@ -3,8 +3,6 @@
  */
 
 export interface iUpdateable {
-    turnOn(): void;
-    turnOff(): void;
     update(ms: number): void;
 }
 
